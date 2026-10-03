@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TaskManagerG2</string>
+    <string name="btnTextMessage1">Mostrar mensaje Toast</string>
+    <string name="btnTextMessage2">Mostrar mensaje Snackbar</string>
+    <string name="btnTextOpenScreen">Mostrar segunda pantalla</string>
+    <string name="TextMessage1">Mensaje #1 de Toast</string>
+    <string name="TextSnackbar">Mensaje de snackbar</string>
+    <string name="SnackbarUndo">Deshacer</string>
+    <string name="SnackbarSuccessAction">Acción ejecutada</string>
+</resources>
