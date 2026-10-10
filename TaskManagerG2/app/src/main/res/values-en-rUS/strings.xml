@@ -8,4 +8,6 @@
     <string name="TextSnackbar">Snackbar message</string>
     <string name="SnackbarUndo">Undo</string>
     <string name="SnackbarSuccessAction">Executed action</string>
+    <string name="btnTextTask_main">Task Management</string>
+    <string name="btnTextTaskList_main">Task List</string>
 </resources>

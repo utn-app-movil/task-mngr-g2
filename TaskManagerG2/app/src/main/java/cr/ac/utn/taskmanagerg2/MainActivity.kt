@@ -1,6 +1,6 @@
 package cr.ac.utn.taskmanagerg2
 
-import Util.util
+import cr.ac.utn.taskmanagerg2.Util.util
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -50,6 +50,18 @@ class MainActivity : AppCompatActivity() {
         btnOpenScreen.setOnClickListener(View.OnClickListener{ view ->
             util.openActivity(this,
                 SecondActivity::class.java)
+        })
+
+        val btnOpenTask: Button = findViewById<Button>(R.id.btnTask_main)
+        btnOpenTask.setOnClickListener(View.OnClickListener{ view ->
+            util.openActivity(this,
+                TaskActivity::class.java)
+        })
+
+        val btnOpenTaskList: Button = findViewById<Button>(R.id.btnTaskList_main)
+        btnOpenTaskList.setOnClickListener(View.OnClickListener{ view ->
+            util.openActivity(this,
+                TaskListActivity::class.java)
         })
     }
 }

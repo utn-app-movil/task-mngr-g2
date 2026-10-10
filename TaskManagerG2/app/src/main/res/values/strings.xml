@@ -7,4 +7,6 @@
     <string name="TextSnackbar">Mensaje de snackbar</string>
     <string name="SnackbarUndo">Deshacer</string>
     <string name="SnackbarSuccessAction">Acción ejecutada</string>
+    <string name="btnTextTask_main">Gestión de tareas</string>
+    <string name="btnTextTaskList_main">Listar tareas</string>
 </resources>
