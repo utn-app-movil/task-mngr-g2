@@ -20,20 +20,21 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="@string/Idtask"
+                tools:text="@string/Idtask" />
 
             <EditText
                 android:id="@+id/txtId_Task"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"
-                android:text="txtId_Task" />
+                android:inputType="text" />
 
             <ImageButton
                 android:id="@+id/btnSearch_Task"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/btnSearch_Task"
                 app:srcCompat="@android:drawable/ic_menu_search" />
 
         </TableRow>
@@ -46,15 +47,14 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="@string/Tarea" />
 
             <EditText
                 android:id="@+id/txtTitle_Task"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"
-                android:text="txtTitle_Task" />
+                android:inputType="text" />
 
         </TableRow>
 
@@ -66,15 +66,15 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="@string/Description" />
 
             <EditText
                 android:id="@+id/txtDescription_Task"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"
-                android:text="txtDescription_Task" />
+                android:inputType="text" />
+
         </TableRow>
 
         <TableRow
@@ -85,19 +85,19 @@
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="@string/Calendar" />
 
             <TextView
                 android:id="@+id/tvDueDate_Task"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="wrap_content" />
 
             <ImageButton
                 android:id="@+id/btnDueDate_Task"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
         </TableRow>
 
         <TableRow
@@ -108,15 +108,15 @@
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="@string/StatusTask" />
 
             <EditText
                 android:id="@+id/txtStatus_Task"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"
-                android:text="txtStatus_Task" />
+                android:inputType="text" />
+
         </TableRow>
 
         <TableRow
@@ -127,15 +127,15 @@
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="@string/PriorityTask" />
 
             <EditText
                 android:id="@+id/txtPriority_Task"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"
-                android:text="txtPriority_Task" />
+                android:inputType="text" />
+
         </TableRow>
 
         <TableRow
@@ -146,15 +146,15 @@
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="@string/AssingTo" />
 
             <EditText
                 android:id="@+id/txtAssignTo_Task"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"
-                android:text="txtAssignTo_Task" />
+                android:inputType="text" />
+
         </TableRow>
 
         <TableRow
@@ -165,7 +165,7 @@
                 android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="@string/ObservationTask" />
 
             <EditText
                 android:id="@+id/txtObservation_Task"
@@ -173,8 +173,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="txtObservation_Task" />
+                android:inputType="textMultiLine" />
+
         </TableRow>
 
     </TableLayout>
@@ -184,7 +184,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="btnCancel_Task"
+        android:text="@string/btnCancel_Task"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnDelete_Task" />
@@ -193,8 +193,8 @@
         android:id="@+id/btnSave_Task"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="btnSave_Task"
+        android:layout_marginTop="36dp"
+        android:text="@string/btnSave_Task"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout2" />
@@ -203,10 +203,10 @@
         android:id="@+id/btnDelete_Task"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="btnDelete_Task"
+        android:layout_marginTop="32dp"
+        android:text="@string/btnDelete_Task"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSave_Task" />
 

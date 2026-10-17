@@ -1,3 +1,4 @@
+
 package cr.ac.utn.taskmanagerg2
 
 import android.os.Bundle
@@ -19,10 +20,10 @@ class TaskActivity : AppCompatActivity() {
     private lateinit var txtAssignTo: EditText
     private lateinit var txtObservation: EditText
     private lateinit var tvDueDate: TextView
+
     private var dueDay: Int = 0
     private var dueMonth: Int = 0
     private var dueYear: Int = 0
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,9 +45,24 @@ class TaskActivity : AppCompatActivity() {
         tvDueDate = findViewById<TextView>(R.id.tvDueDate_Task)
 
         val btnSave = findViewById<Button>(R.id.btnSave_Task)
-        val btnRemove = findViewById<Button>(R.id.btnDelete_Task)
+        val btnDelete = findViewById<Button>(R.id.btnDelete_Task)
         val btnCancel = findViewById<Button>(R.id.btnCancel_Task)
         val btnSearch = findViewById<ImageButton>(R.id.btnSearch_Task)
         val btnDueDate = findViewById<ImageButton>(R.id.btnDueDate_Task)
+
+        btnSave.setOnClickListener {
+        }
+
+        btnDelete.setOnClickListener {
+        }
+
+        btnCancel.setOnClickListener {
+        }
+
+        btnSearch.setOnClickListener {
+        }
+
+        btnDueDate.setOnClickListener {
+        }
     }
 }
