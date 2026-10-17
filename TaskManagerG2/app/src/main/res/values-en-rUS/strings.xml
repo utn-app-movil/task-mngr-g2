@@ -10,4 +10,14 @@
     <string name="SnackbarSuccessAction">Executed action</string>
     <string name="btnTextTask_main">Task Management</string>
     <string name="btnTextTaskList_main">Task List</string>
+    <string name="msg_save_success">The task was saved successfully</string>
+    <string name="msg_delete_success">The task was deleted successfully</string>
+    <string name="msg_error_duplicate_data">Error: a task with the same data already exists.</string>
+    <string name="msg_no_data_found">No data found.</string>
+    <string name="msg_error_save">Error saving the task.</string>
+    <string name="msg_error_delete">Error deleting the task.</string>
+    <string name="msg_error_task_completed">The task cannot be deleted or cancelled because it is completed.</string>
+    <string name="dialog_confirm_message">Do you want to continue with the action?</string>
+    <string name="dialog_btn_yes">Yes</string>
+    <string name="dialog_btn_no">No</string>
 </resources>

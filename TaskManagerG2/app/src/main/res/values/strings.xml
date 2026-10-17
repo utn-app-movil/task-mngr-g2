@@ -9,4 +9,17 @@
     <string name="SnackbarSuccessAction">Acción ejecutada</string>
     <string name="btnTextTask_main">Gestión de tareas</string>
     <string name="btnTextTaskList_main">Listar tareas</string>
+
+
+    <string name="msg_save_success">La tarea se guardó correctamente.</string>
+    <string name="msg_delete_success">La tarea se eliminó correctamente.</string>
+    <string name="msg_error_duplicate_data">Error: ya existe una tarea con los mismos datos.</string>
+    <string name="msg_no_data_found">No se encontraron datos.</string>
+    <string name="msg_error_save">Error al guardar la tarea.</string>
+    <string name="msg_error_delete">Error al eliminar la tarea.</string>
+    <string name="msg_error_task_completed">La tarea no puede ser eliminada o anulada porque está completa.</string>
+
+    <string name="dialog_confirm_message">¿Desea continuar con la acción?</string>
+    <string name="dialog_btn_yes">Sí</string>
+    <string name="dialog_btn_no">No</string>
 </resources>

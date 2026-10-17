@@ -9,8 +9,11 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 
 class TaskActivity : AppCompatActivity() {
+
     private lateinit var txtId: EditText
     private lateinit var txtTitle: EditText
     private lateinit var txtDescription: EditText
@@ -48,5 +51,27 @@ class TaskActivity : AppCompatActivity() {
         val btnCancel = findViewById<Button>(R.id.btnCancel_Task)
         val btnSearch = findViewById<ImageButton>(R.id.btnSearch_Task)
         val btnDueDate = findViewById<ImageButton>(R.id.btnDueDate_Task)
+
+
+        btnSave.setOnClickListener {
+            AlertDialog.Builder(this)
+                .setMessage(getString(R.string.dialog_confirm_message))
+                .setPositiveButton(getString(R.string.dialog_btn_yes)) { _, _ ->
+                    Toast.makeText(this, getString(R.string.msg_save_success), Toast.LENGTH_SHORT).show()
+                }
+                .setNegativeButton(getString(R.string.dialog_btn_no), null)
+                .show()
+        }
+
+        btnRemove.setOnClickListener {
+            AlertDialog.Builder(this)
+                .setMessage(getString(R.string.dialog_confirm_message))
+                .setPositiveButton(getString(R.string.dialog_btn_yes)) { _, _ ->
+                    Toast.makeText(this, getString(R.string.msg_delete_success), Toast.LENGTH_SHORT).show()
+                }
+                .setNegativeButton(getString(R.string.dialog_btn_no), null)
+                .show()
+        }
+
+        btnCancel.setOnClickListener { finish() }
     }
-}
