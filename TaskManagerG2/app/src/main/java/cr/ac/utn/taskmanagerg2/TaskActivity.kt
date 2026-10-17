@@ -21,7 +21,7 @@ class TaskActivity : AppCompatActivity() {
     private lateinit var txtPriority: EditText
     private lateinit var txtAssignTo: EditText
     private lateinit var txtObservation: EditText
-    private lateinit var txtDueDate: TextView
+    private lateinit var tvDueDate: TextView
     private var dueDay: Int = 0
     private var dueMonth: Int = 0
     private var dueYear: Int = 0
@@ -37,14 +37,14 @@ class TaskActivity : AppCompatActivity() {
             insets
         }
 
-        txtId = findViewById<EditText>(R.id.txtId_task)
+        txtId = findViewById<EditText>(R.id.txtId_Task)
         txtTitle = findViewById<EditText>(R.id.txtTitle_Task)
         txtDescription = findViewById<EditText>(R.id.txtDescription_Task)
         txtStatus = findViewById<EditText>(R.id.txtStatus_Task)
         txtPriority = findViewById<EditText>(R.id.txtPriority_Task)
         txtAssignTo = findViewById<EditText>(R.id.txtAssignTo_Task)
         txtObservation = findViewById<EditText>(R.id.txtObservation_Task)
-        txtDueDate = findViewById<TextView>(R.id.tvDueDate_task)
+        tvDueDate = findViewById<TextView>(R.id.tvDueDate_Task)
 
         val btnSave = findViewById<Button>(R.id.btnSave_Task)
         val btnRemove = findViewById<Button>(R.id.btnDelete_Task)
