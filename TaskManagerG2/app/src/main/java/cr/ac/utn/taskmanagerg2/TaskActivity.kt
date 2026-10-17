@@ -1,6 +1,9 @@
 package cr.ac.utn.taskmanagerg2
 
 import android.os.Bundle
+
+import android.view.View
+
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
@@ -48,5 +51,32 @@ class TaskActivity : AppCompatActivity() {
         val btnCancel = findViewById<Button>(R.id.btnCancel_Task)
         val btnSearch = findViewById<ImageButton>(R.id.btnSearch_Task)
         val btnDueDate = findViewById<ImageButton>(R.id.btnDueDate_Task)
+
+
+        // Evento Click para Guardar
+        btnSave.setOnClickListener(View.OnClickListener { view ->
+
+        })
+
+        // Evento Click para Eliminar
+        btnRemove.setOnClickListener(View.OnClickListener { view ->
+
+        })
+
+        // Evento Click para Cancelar
+        btnCancel.setOnClickListener(View.OnClickListener { view ->
+
+        })
+
+        // Evento Click para Buscar
+        btnSearch.setOnClickListener(View.OnClickListener { view ->
+
+        })
+
+        // Evento Click para Seleccionar Fecha de Vencimiento
+        btnDueDate.setOnClickListener(View.OnClickListener { view ->
+
+        })
+
     }
 }
