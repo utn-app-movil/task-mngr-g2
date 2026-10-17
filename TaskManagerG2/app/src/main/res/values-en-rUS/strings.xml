@@ -10,4 +10,32 @@
     <string name="SnackbarSuccessAction">Executed action</string>
     <string name="btnTextTask_main">Task Management</string>
     <string name="btnTextTaskList_main">Task List</string>
+
+    <!-- TaskActivity -->
+
+    <string name="lblId_Task">Id</string>
+    <string name="lblTitle_Task">Title</string>
+    <string name="lblDescription_Task">Description</string>
+    <string name="lblDueDate_Task">Due date</string>
+    <string name="lblStatus_Task">Status</string>
+    <string name="lblAssignedTo_Task">Assigned to</string>
+    <string name="lblPriority_Task">Priority</string>
+    <string name="lblNotes_Task">Notes</string>
+    <string name="btnSave_Task">Save</string>
+    <string name="btnDelete_Task">Delete</string>
+    <string name="btnCancel_Task">Cancel</string>
+    <string name="btnSearch_Task">Search</string>
+
+    <!-- CRUD messages -->
+
+    <string name="MsgSaveSuccess">Data saved successfully</string>
+    <string name="MsgDeleteSuccess">Data deleted successfully</string>
+    <string name="MsgDuplicateDate">Error: duplicate data already exists</string>
+    <string name="MsgDataNotFound">No data found</string>
+    <string name="ErrorMsgSave">Error saving data</string>
+    <string name="ErrorMsgDelete">Error deleting data</string>
+    <string name="ErrorMsgRemoveTaskCompleted">The task cannot be deleted or cancelled because it is completed</string>
+    <string name="TextConfirmAction">Do you want to continue with this action?</string>
+    <string name="TextYes">Yes</string>
+    <string name="TextNo">No</string>
 </resources>

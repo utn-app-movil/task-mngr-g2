@@ -4,7 +4,10 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -20,9 +23,8 @@ class TaskActivity : AppCompatActivity() {
     private lateinit var txtObservation: EditText
     private lateinit var tvDueDate: TextView
     private var dueDay: Int = 0
-    private var dueMonth: Int = 0
+    private var dueMonth: Int =0
     private var dueYear: Int = 0
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,20 +35,41 @@ class TaskActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
         txtId = findViewById<EditText>(R.id.txtId_Task)
         txtTitle = findViewById<EditText>(R.id.txtTitle_Task)
         txtDescription = findViewById<EditText>(R.id.txtDescription_Task)
-        txtStatus = findViewById<EditText>(R.id.txtStatus_Task)
+        txtStatus= findViewById<EditText>(R.id.txtStatus_Task)
         txtPriority = findViewById<EditText>(R.id.txtPriority_Task)
-        txtAssignTo = findViewById<EditText>(R.id.txtAssignTo_Task)
-        txtObservation = findViewById<EditText>(R.id.txtObservation_Task)
-        tvDueDate = findViewById<TextView>(R.id.tvDueDate_Task)
+        txtAssignTo= findViewById<EditText>(R.id.txtAssignTo_Task)
+        txtObservation= findViewById<EditText>(R.id.txtObservation_Task)
+        tvDueDate= findViewById<TextView>(R.id.tvDueDate_Task)
 
         val btnSave = findViewById<Button>(R.id.btnSave_Task)
         val btnRemove = findViewById<Button>(R.id.btnDelete_Task)
         val btnCancel = findViewById<Button>(R.id.btnCancel_Task)
         val btnSearch = findViewById<ImageButton>(R.id.btnSearch_Task)
         val btnDueDate = findViewById<ImageButton>(R.id.btnDueDate_Task)
+
+        btnSave.setOnClickListener {
+        }
+        btnRemove.setOnClickListener {
+        }
+        btnCancel.setOnClickListener {
+            finish()
+        }
+        btnSearch.setOnClickListener {
+            Toast.makeText(this, R.string.MsgDataNotFound, Toast.LENGTH_SHORT).show()
+        }
+        btnDueDate.setOnClickListener {
+        }
+
+    }
+
+    private fun showConfirmDialog(onConfirm: () -> Unit) {
+        AlertDialog.Builder(this)
+            .setMessage(R.string.TextConfirmAction)
+            .setPositiveButton(R.string.TextYes) { _, _ -> onConfirm() }
+            .setNegativeButton(R.string.TextNo, null)
+            .show()
     }
 }
