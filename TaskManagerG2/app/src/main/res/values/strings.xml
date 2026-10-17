@@ -9,4 +9,34 @@
     <string name="SnackbarSuccessAction">Acción ejecutada</string>
     <string name="btnTextTask_main">Gestión de tareas</string>
     <string name="btnTextTaskList_main">Listar tareas</string>
+
+    <!-- TaskActivity -->
+
+
+    <string name="lblId_Task">Id</string>
+    <string name="lblTitle_Task">Título</string>
+    <string name="lblDescription_Task">Descripción</string>
+    <string name="lblDueDate_Task">Fecha de vencimiento</string>
+    <string name="lblStatus_Task">Estado</string>
+    <string name="lblAssignedTo_Task">Asignado a</string>
+    <string name="lblPriority_Task">Prioridad</string>
+    <string name="lblNotes_Task">Notas</string>
+    <string name="btnSave_Task">Guardar</string>
+    <string name="btnDelete_Task">Eliminar</string>
+    <string name="btnCancel_Task">Cancelar</string>
+    <string name="btnSearch_Task">Buscar</string>
+
+    <!-- Mensajes CRUD -->
+
+    <string name="MsgSaveSuccess">Datos guardados correctamente</string>
+    <string name="MsgDeleteSuccess">Datos eliminados correctamente</string>
+    <string name="MsgDuplicateDate">Error: ya existen datos duplicados</string>
+    <string name="MsgDataNotFound">No se encontraron datos</string>
+    <string name="ErrorMsgSave">Error al guardar los datos</string>
+    <string name="ErrorMsgDelete">Error al eliminar los datos</string>
+    <string name="ErrorMsgRemoveTaskCompleted">La tarea no puede ser eliminada o anulada porque está completa</string>
+    <string name="TextConfirmAction">¿Desea continuar con la acción?</string>
+    <string name="TextYes">Sí</string>
+    <string name="TextNo">No</string>
+
 </resources>
