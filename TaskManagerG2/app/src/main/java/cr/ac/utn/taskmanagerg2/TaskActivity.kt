@@ -1,6 +1,7 @@
 package cr.ac.utn.taskmanagerg2
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
@@ -9,6 +10,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.snackbar.Snackbar
 
 class TaskActivity : AppCompatActivity() {
     private lateinit var txtId: EditText
@@ -48,5 +50,18 @@ class TaskActivity : AppCompatActivity() {
         val btnCancel = findViewById<Button>(R.id.btnCancel_Task)
         val btnSearch = findViewById<ImageButton>(R.id.btnSearch_Task)
         val btnDueDate = findViewById<ImageButton>(R.id.btnDueDate_Task)
+
+
+        btnSave.setOnClickListener(View.OnClickListener{ view ->
+        })
+
+        btnRemove.setOnClickListener(View.OnClickListener{ view ->
+        })
+
+        btnCancel.setOnClickListener(View.OnClickListener{ view ->
+        })
+
+        btnSearch.setOnClickListener(View.OnClickListener{ view ->
+        })
     }
 }
