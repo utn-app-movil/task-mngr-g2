@@ -1,3 +1,4 @@
+
 package cr.ac.utn.taskmanagerg2
 
 import android.os.Bundle
@@ -11,6 +12,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class TaskActivity : AppCompatActivity() {
+
     private lateinit var txtId: EditText
     private lateinit var txtTitle: EditText
     private lateinit var txtDescription: EditText
@@ -19,18 +21,30 @@ class TaskActivity : AppCompatActivity() {
     private lateinit var txtAssignTo: EditText
     private lateinit var txtObservation: EditText
     private lateinit var tvDueDate: TextView
+
     private var dueDay: Int = 0
     private var dueMonth: Int = 0
     private var dueYear: Int = 0
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_task)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+
+        ViewCompat.setOnApplyWindowInsetsListener(
+            findViewById(R.id.main)
+        ) { v, insets ->
+            val systemBars = insets.getInsets(
+                WindowInsetsCompat.Type.systemBars()
+            )
+
+            v.setPadding(
+                systemBars.left,
+                systemBars.top,
+                systemBars.right,
+                systemBars.bottom
+            )
+
             insets
         }
 
@@ -48,5 +62,25 @@ class TaskActivity : AppCompatActivity() {
         val btnCancel = findViewById<Button>(R.id.btnCancel_Task)
         val btnSearch = findViewById<ImageButton>(R.id.btnSearch_Task)
         val btnDueDate = findViewById<ImageButton>(R.id.btnDueDate_Task)
+
+        btnSave.setOnClickListener {
+
+        }
+
+        btnRemove.setOnClickListener {
+
+        }
+
+        btnCancel.setOnClickListener {
+
+        }
+
+        btnSearch.setOnClickListener {
+
+        }
+
+        btnDueDate.setOnClickListener {
+
+        }
     }
 }
