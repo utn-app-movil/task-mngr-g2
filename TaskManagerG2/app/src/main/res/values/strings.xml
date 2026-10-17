@@ -9,4 +9,27 @@
     <string name="SnackbarSuccessAction">Acción ejecutada</string>
     <string name="btnTextTask_main">Gestión de tareas</string>
     <string name="btnTextTaskList_main">Listar tareas</string>
+    <string name="txtId">Id</string>
+    <string name="txtTitle">Titulo</string>
+    <string name="txtDescription">Descripcion</string>
+    <string name="txtDueDate">Fecha</string>
+    <string name="txtStatus">Estado</string>
+    <string name="txtAssignTo">Asignado a</string>
+    <string name="txtPriority">Prioridad</string>
+    <string name="btnTextGuardar">Guardar</string>
+    <string name="btnTextDelete">Borrar</string>
+    <string name="btnTextCancel">Cancelar</string>
+    <string name="btnTextSearch">Buscar</string>
+    <string name="TextMessageSaveSuccess">Se guardo Exitosamente</string>
+    <string name="textMessageDeleteSuccess">Se elimino Exitosamente</string>
+    <string name="TextMessageErrDuplicateData">Error datos duplicados</string>
+    <string name="TextMessageErrDataNotFound">Error informacion no encontrada</string>
+    <string name="TextMessageErrSave">Error al guardar</string>
+    <string name="TextMessageErrDelete">Error al Eliminar</string>
+    <string name="TextMessageCompleteData">No se puede borrar porque esta completa</string>
+    <string name="btnTextContinue">Desea continuar con la accion?</string>
+    <string name="txtYes">Si</string>
+    <string name="txtNo">No</string>
+
+
 </resources>
