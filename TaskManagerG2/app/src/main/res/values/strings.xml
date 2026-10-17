@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 <resources>
     <string name="app_name">TaskManagerG2</string>
     <string name="btnTextMessage1">Mostrar mensaje Toast</string>
@@ -9,4 +11,26 @@
     <string name="SnackbarSuccessAction">Acción ejecutada</string>
     <string name="btnTextTask_main">Gestión de tareas</string>
     <string name="btnTextTaskList_main">Listar tareas</string>
+    <string name="task_id">ID</string>
+    <string name="task_title">Titulo</string>
+    <string name="task_description">Descripcion</string>
+    <string name="task_due_date">Fecha de vencimiento</string>
+    <string name="task_status">Estado</string>
+    <string name="task_assigned_to">"Asignado a "</string>
+    <string name="task_notes">Observaciones</string>
+    <string name="btn_save">Guardar</string>
+    <string name="btn_delete">Borrar</string>
+    <string name="btn_cancel">Cancelar</string>
+    <string name="btn_search">Buscar</string>
+    <string name="message_save_success">Tarea guardada correctamente</string>
+    <string name="message_delete_success">Tarea Eliminada</string>
+    <string name="message_duplicate">Data duplicada</string>
+    <string name="message_not_found">No se encontraron datos</string>
+    <string name="message_save_error">Error de guardado</string>
+    <string name="message_delete_error">Error al eliminar la tarea</string>
+    <string name="message_task_completed">La tarea no puede ser eliminada o anulada porque está completa</string>
+    <string name="dialog_confirm">Desea continuar?</string>
+    <string name="dialog_yes">Si</string>
+    <string name="dialog_no">No</string>
+    <string name="task_priority">Prioridad</string>
 </resources>
