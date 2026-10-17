@@ -1,3 +1,4 @@
+
 <resources>
     <string name="app_name">TaskManagerG2</string>
     <string name="btnTextMessage1">Mostrar mensaje Toast</string>
@@ -9,4 +10,32 @@
     <string name="SnackbarSuccessAction">Acción ejecutada</string>
     <string name="btnTextTask_main">Gestión de tareas</string>
     <string name="btnTextTaskList_main">Listar tareas</string>
+
+    <string name="task_id">ID</string>
+    <string name="task_title">Título</string>
+    <string name="task_description">Descripción</string>
+    <string name="task_due_date">Fecha límite</string>
+    <string name="task_status">Estado</string>
+    <string name="task_assigned_to">Asignado a</string>
+    <string name="task_priority">Prioridad</string>
+    <string name="task_notes">Observaciones</string>
+
+    <string name="task_save">Guardar</string>
+    <string name="task_delete">Eliminar</string>
+    <string name="task_cancel">Cancelar</string>
+    <string name="task_search">Buscar</string>
+    <string name="task_select_date">Seleccionar fecha</string>
+
+    <string name="task_saved">Tarea guardada correctamente.</string>
+    <string name="task_deleted">Tarea eliminada correctamente.</string>
+    <string name="task_duplicated">Error: la tarea ya existe.</string>
+    <string name="task_not_found">No se encontraron datos.</string>
+    <string name="task_save_error">Error al guardar. Verifique los datos.</string>
+    <string name="task_delete_error">Error al eliminar la tarea.</string>
+    <string name="task_completed_error">La tarea no puede ser eliminada o anulada porque está completa.</string>
+
+    <string name="task_confirm_save">¿Desea continuar y guardar la tarea?</string>
+    <string name="task_confirm_delete">¿Desea continuar y eliminar la tarea?</string>
+    <string name="dialog_yes">Sí</string>
+    <string name="dialog_no">No</string>
 </resources>
