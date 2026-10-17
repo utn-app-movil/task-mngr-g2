@@ -1,6 +1,7 @@
 package cr.ac.utn.taskmanagerg2
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
@@ -42,9 +43,10 @@ class TaskActivity : AppCompatActivity() {
         txtObservation = findViewById<EditText>(R.id.txtObservation_Task)
         tvDueDate = findViewById<TextView>(R.id.tvDueDate_Task)
 
-        val btnSave = findViewById<ImageButton>(R.id.btnSave_Task)
-        val btnRemove = findViewById<ImageButton>(R.id.btnDelete_Task)
-        val btnCancel = findViewById<ImageButton>(R.id.btnCancel_Task)
+        val btnSave = findViewById<Button>(R.id.btnSave_Task)
+        val btnRemove = findViewById<Button>(R.id.btnDelete_Task)
+        val btnCancel = findViewById<Button>(R.id.btnCancel_Task)
         val btnSearch = findViewById<ImageButton>(R.id.btnSearch_Task)
+        val btnDueDate = findViewById<ImageButton>(R.id.btnDueDate_Task)
     }
 }
