@@ -1,7 +1,9 @@
 package cr.ac.utn.taskmanagerg2
 
 import android.os.Bundle
+
 import android.view.View
+
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
@@ -50,6 +52,7 @@ class TaskActivity : AppCompatActivity() {
         val btnSearch = findViewById<ImageButton>(R.id.btnSearch_Task)
         val btnDueDate = findViewById<ImageButton>(R.id.btnDueDate_Task)
 
+
         // Evento Click para Guardar
         btnSave.setOnClickListener(View.OnClickListener { view ->
 
@@ -74,5 +77,6 @@ class TaskActivity : AppCompatActivity() {
         btnDueDate.setOnClickListener(View.OnClickListener { view ->
 
         })
+
     }
 }
