@@ -10,4 +10,22 @@
     <string name="SnackbarSuccessAction">Executed action</string>
     <string name="btnTextTask_main">Task Management</string>
     <string name="btnTextTaskList_main">Task List</string>
+    <string name="textView_Id">Display ID</string>
+    <string name="textView_Title">Display Title</string>
+    <string name="textView_Description">Display Description</string>
+    <string name="textView_DueDate">Display DueDate</string>
+    <string name="textView_Status">Display Status</string>
+    <string name="textView_Priority">Display priority</string>
+    <string name="textView_AssingTo">"Display assing task "</string>
+    <string name="textView_Observation">Display Observation</string>
+    <string name="msg_save_succes">The data was saved correctly</string>
+    <string name="msg_delete_succes">The data was deleted correctly</string>
+    <string name="msg_duplicate_error">The data entered already exists</string>
+    <string name="msg_no_data">The data was not found</string>
+    <string name="msg_save_error">Error saving the data</string>
+    <string name="msg_delete_error">Error deleting the data</string>
+    <string name="msg_task_completed">The task can\'t be deleted or canceled because it\'s complete</string>
+    <string name="msg_confirm">Do you want to continue with the action?</string>
+    <string name="btn_yes">Yes</string>
+    <string name="btn_no">No</string>
 </resources>
