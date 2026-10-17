@@ -10,4 +10,26 @@
     <string name="SnackbarSuccessAction">Executed action</string>
     <string name="btnTextTask_main">Task Management</string>
     <string name="btnTextTaskList_main">Task List</string>
+    <string name="btnSave">Save</string>
+    <string name="btnDelete">Delete</string>
+    <string name="btnCancel">Cancel</string>
+    <string name="bntSearch">Search</string>
+    <string name="txtId">Id</string>
+    <string name="txtTitle">Title</string>
+    <string name="txtDescription">Description</string>
+    <string name="txtdueDate">Due date</string>
+    <string name="txtStatus">Status</string>
+    <string name="txtassignedTo">assignedTo</string>
+    <string name="txtpriority">Priority</string>
+    <string name="txtnotes">Notes</string>
+    <string name="guardado">Save Correctly</string>
+    <string name="eliminar">Delete Correctly</string>
+    <string name="error_duplicado">Error: Duplicate data</string>
+    <string name="notfound">Not  found data</string>
+    <string name="error_guardar">Error while saving</string>
+    <string name="error_eliminar">Error while deleting</string>
+    <string name="completetask">The task cannot be deleted or cancelled because it is complete.</string>
+    <string name="Dialog">Do you wish to continue with the action?</string>
+    <string name="btnyes">Yes</string>
+    <string name="btnNo">No</string>
 </resources>

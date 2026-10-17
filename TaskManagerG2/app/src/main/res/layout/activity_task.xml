@@ -20,15 +20,14 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="@string/txtId" />
 
             <EditText
                 android:id="@+id/txtId_Task"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"
-                android:text="txtId_Task" />
+                android:inputType="text" />
 
             <ImageButton
                 android:id="@+id/btnSearch_Task"
@@ -46,7 +45,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="@string/txtTitle" />
 
             <EditText
                 android:id="@+id/txtTitle_Task"
@@ -66,7 +65,7 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="@string/txtDescription" />
 
             <EditText
                 android:id="@+id/txtDescription_Task"
@@ -85,7 +84,7 @@
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="@string/txtdueDate" />
 
             <TextView
                 android:id="@+id/tvDueDate_Task"
@@ -108,7 +107,7 @@
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="@string/txtStatus" />
 
             <EditText
                 android:id="@+id/txtStatus_Task"
@@ -127,7 +126,7 @@
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="@string/txtpriority" />
 
             <EditText
                 android:id="@+id/txtPriority_Task"
@@ -146,7 +145,7 @@
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="@string/txtassignedTo" />
 
             <EditText
                 android:id="@+id/txtAssignTo_Task"
@@ -165,7 +164,7 @@
                 android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="@string/txtnotes" />
 
             <EditText
                 android:id="@+id/txtObservation_Task"
@@ -184,7 +183,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="btnCancel_Task"
+        android:text="@string/btnCancel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnDelete_Task" />
@@ -194,7 +193,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="btnSave_Task"
+        android:text="@string/btnSave"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout2" />
@@ -204,7 +203,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="btnDelete_Task"
+        android:text="@string/btnDelete"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
