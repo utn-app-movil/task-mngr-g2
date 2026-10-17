@@ -1,6 +1,8 @@
+
 package cr.ac.utn.taskmanagerg2
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
@@ -43,10 +45,29 @@ class TaskActivity : AppCompatActivity() {
         txtObservation = findViewById<EditText>(R.id.txtObservation_Task)
         tvDueDate = findViewById<TextView>(R.id.tvDueDate_Task)
 
-        val btnSave = findViewById<Button>(R.id.btnSave_Task)
-        val btnRemove = findViewById<Button>(R.id.btnDelete_Task)
-        val btnCancel = findViewById<Button>(R.id.btnCancel_Task)
-        val btnSearch = findViewById<ImageButton>(R.id.btnSearch_Task)
-        val btnDueDate = findViewById<ImageButton>(R.id.btnDueDate_Task)
+        val btnSave: Button = findViewById<Button>(R.id.btnSave_Task)
+        btnSave.setOnClickListener(View.OnClickListener { view ->
+
+        })
+
+        val btnRemove: Button = findViewById<Button>(R.id.btnDelete_Task)
+        btnRemove.setOnClickListener(View.OnClickListener { view ->
+
+        })
+
+        val btnCancel: Button = findViewById<Button>(R.id.btnCancel_Task)
+        btnCancel.setOnClickListener(View.OnClickListener { view ->
+
+        })
+
+        val btnSearch: ImageButton = findViewById<ImageButton>(R.id.btnSearch_Task)
+        btnSearch.setOnClickListener(View.OnClickListener { view ->
+
+        })
+
+        val btnDueDate: ImageButton = findViewById<ImageButton>(R.id.btnDueDate_Task)
+        btnDueDate.setOnClickListener(View.OnClickListener { view ->
+
+        })
     }
 }
