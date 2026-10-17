@@ -12,7 +12,7 @@
     <string name="id">Id</string>
     <string name="title">Título</string>
     <string name="description">Descripción</string>
-    <string name="dueDate">Fecha</string>
+    <string name="dueDate">Fecha vencimiento</string>
     <string name="status">Estado</string>
     <string name="assignedTo">"Asignado a "</string>
     <string name="priority">Prioridad</string>
