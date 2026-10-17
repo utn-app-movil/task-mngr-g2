@@ -10,4 +10,25 @@
     <string name="SnackbarSuccessAction">Executed action</string>
     <string name="btnTextTask_main">Task Management</string>
     <string name="btnTextTaskList_main">Task List</string>
+    <string name="txtId">ID</string>
+    <string name="txtTitle">Title</string>
+    <string name="txtDescripción">Description</string>
+    <string name="textDueDate">Date</string>
+    <string name="txtStatus">Status</string>
+    <string name="txtAssignTo">Assign to</string>
+    <string name="txtPriority">Priority</string>
+    <string name="btnSave">Save</string>
+    <string name="btnDelete">Delete</string>
+    <string name="btnCancel">Cancel</string>
+    <string name="btnSearch">Search</string>
+    <string name="btnTxtSaveSuccess">Save successfully</string>
+    <string name="btnTxtDeleteSuccess">Delete successfully</string>
+    <string name="txtErrorDuplicateData">Error for duplicated data</string>
+    <string name="txtDataNotFound">Data not found</string>
+    <string name="txtErrorAtSave">Error saving the data</string>
+    <string name="txtErrorAtDelete">Error deleting the data</string>
+    <string name="txtCompleteData">Can\'t be deleted because the data is completed</string>
+    <string name="txtContinue">You want to proceed with the action?</string>
+    <string name="txtYes">Yes</string>
+    <string name="txtNot">No</string>
 </resources>
