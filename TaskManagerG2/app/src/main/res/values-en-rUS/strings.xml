@@ -10,4 +10,25 @@
     <string name="SnackbarSuccessAction">Executed action</string>
     <string name="btnTextTask_main">Task Management</string>
     <string name="btnTextTaskList_main">Task List</string>
+    <string name="Id_txtTask">Id Text Message</string>
+    <string name="Tittle_txtTittleTask">Tittle Message</string>
+    <string name="Description_txtTask">Description</string>
+    <string name="dueDate_txtTask">Due Date</string>
+    <string name="status_txtTask">Status</string>
+    <string name="assignedTO_txtTask">Assinged to</string>
+    <string name="priority_txtTask">Priority</string>
+    <string name="notes_txtTask">Notes</string>
+    <string name="btnSave">Save</string>
+    <string name="btnDelete">Delete</string>
+    <string name="btnCancel">Cancel</string>
+    <string name="btnSearch">Search</string>
+    <string name="SaveSuccess">Save Success</string>
+    <string name="DeleteSuccess">Delete Success</string>
+    <string name="DuplicateData">Duplicated Data</string>
+    <string name="NoDataFound">No data Found</string>
+    <string name="NoDataSaved">No data Save</string>
+    <string name="NoDataDeleted">No data deleted</string>
+    <string name="TaskFinished">The task cannot be deleted or reverted because is already finished</string>
+    <string name="Dialogyes">Yes for the dialoge</string>
+    <string name="Dialogeno">No for the dialoge</string>
 </resources>
