@@ -9,4 +9,26 @@
     <string name="SnackbarSuccessAction">Acción ejecutada</string>
     <string name="btnTextTask_main">Gestión de tareas</string>
     <string name="btnTextTaskList_main">Listar tareas</string>
+    <string name="btnSave_Task">GuardarTarea</string>
+    <string name="btnDelete_Task">BorrarTarea</string>
+    <string name="btnCancel_Task">CancelarTarea</string>
+    <string name="btnSearch_Task">BucarTarea</string>
+    <string name="txtId_Task">ID</string>
+    <string name="txtTitle_Task">Titulo</string>
+    <string name="txtDescription_Task">Descripcion</string>
+    <string name="tvDueDate_Task">FechaVencimiento</string>
+    <string name="txtStatus_Task">Estado</string>
+    <string name="txtPriority_Task">Prioridad</string>
+    <string name="txtAssignTo_Task">Asignado</string>
+    <string name="txtObservation_Task">Observacion</string>
+    <string name="msg_save_success">Satisfacción al guardar</string>
+    <string name="msg_delete_success">Satisfacción al eliminar</string>
+    <string name="msg_duplicate">Mensaje error datos duplicados</string>
+    <string name="msg_not_found">Mensaje no se encontraron datos</string>
+    <string name="msg_save_error">Mensaje error al guardar</string>
+    <string name="msg_delete_error">Mensaje error al eliminar</string>
+    <string name="msg_task_completed">Mensaje la tarea no puede ser eliminada o anulada porque está completa</string>
+    <string name="dialog_confirm">¿Desea continuar con esta acción?</string>
+    <string name="dialog_yes">Sí</string>
+    <string name="dialog_no">No</string>
 </resources>

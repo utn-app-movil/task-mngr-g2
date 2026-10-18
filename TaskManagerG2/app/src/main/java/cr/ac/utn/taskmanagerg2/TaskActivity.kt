@@ -9,15 +9,18 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import cr.ac.utn.taskmanagerg2.domain.model.TaskPriority
 
 class TaskActivity : AppCompatActivity() {
+
     private lateinit var txtId: EditText
     private lateinit var txtTitle: EditText
     private lateinit var txtDescription: EditText
     private lateinit var txtStatus: EditText
     private lateinit var txtPriority: EditText
-    private lateinit var txtAssignTo: EditText
+    private lateinit var txtAssingTo: EditText
     private lateinit var txtObservation: EditText
+
     private lateinit var tvDueDate: TextView
     private var dueDay: Int = 0
     private var dueMonth: Int = 0
@@ -33,20 +36,30 @@ class TaskActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
         txtId = findViewById<EditText>(R.id.txtId_Task)
         txtTitle = findViewById<EditText>(R.id.txtTitle_Task)
-        txtDescription = findViewById<EditText>(R.id.txtDescription_Task)
+        txtDescription= findViewById<EditText>(R.id.txtDescription_Task)
         txtStatus = findViewById<EditText>(R.id.txtStatus_Task)
         txtPriority = findViewById<EditText>(R.id.txtPriority_Task)
-        txtAssignTo = findViewById<EditText>(R.id.txtAssignTo_Task)
-        txtObservation = findViewById<EditText>(R.id.txtObservation_Task)
-        tvDueDate = findViewById<TextView>(R.id.tvDueDate_Task)
+        txtObservation = findViewById<EditText>(R.id.txtAssignTo_Task)
+        txtAssingTo = findViewById<EditText>(R.id.txtObservation_Task)
+        tvDueDate = findViewById<EditText>(R.id.tvDueDate_Task)
 
         val btnSave = findViewById<Button>(R.id.btnSave_Task)
+        btnSave.setOnClickListener {  }
+
         val btnRemove = findViewById<Button>(R.id.btnDelete_Task)
+        btnRemove.setOnClickListener {  }
+
         val btnCancel = findViewById<Button>(R.id.btnCancel_Task)
+        btnCancel.setOnClickListener {  }
+
         val btnSearch = findViewById<ImageButton>(R.id.btnSearch_Task)
+        btnSearch.setOnClickListener {  }
+
         val btnDueDate = findViewById<ImageButton>(R.id.btnDueDate_Task)
+        btnDueDate.setOnClickListener {  }
+
+
     }
 }
