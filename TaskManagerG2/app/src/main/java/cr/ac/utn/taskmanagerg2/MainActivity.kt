@@ -26,8 +26,8 @@ class MainActivity : AppCompatActivity() {
         val btnMessage1: Button = findViewById<Button>(R.id.btnMessage1_main)
         btnMessage1.setOnClickListener(View.OnClickListener{ view ->
             Toast.makeText(this,
-                getString(R.string.TextMessage1),
-                    Toast.LENGTH_LONG).show()
+            getString(R.string.TextMessage1),
+            Toast.LENGTH_LONG).show()
         })
 
         val clmain = findViewById<ConstraintLayout>(R.id.main)
