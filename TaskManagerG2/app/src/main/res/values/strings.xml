@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">TaskManagerG2</string>
+    <string name="btnTextMessage1">Mostrar mensaje Toast</string>
+    <string name="btnTextMessage2">Mostrar mensaje Snackbar</string>
+    <string name="btnTextOpenScreen">Mostrar segunda pantalla</string>
+    <string name="TextMessage1">Mensaje #1 de Toast</string>
+    <string name="TextSnackbar">Mensaje de snackbar</string>
+    <string name="SnackbarUndo">Deshacer</string>
+    <string name="SnackbarSuccessAction">Acción ejecutada</string>
+    <string name="btnTextTask_main">Gestión de tareas</string>
+    <string name="btnTextTaskList_main">Listar tareas</string>
+
+    <string name="task_id">Id</string>
+    <string name="task_title">Título</string>
+    <string name="task_description">Descripción</string>
+    <string name="task_due_date">Fecha de vencimiento</string>
+    <string name="task_status">Estado</string>
+    <string name="task_assigned_to">Asignado a</string>
+    <string name="task_priority">Prioridad</string>
+    <string name="task_notes">Observaciones</string>
+
+    <string name="btn_save">Guardar</string>
+    <string name="btn_delete">Eliminar</string>
+    <string name="btn_cancel">Cancelar</string>
+    <string name="btn_search">Buscar</string>
+
+    <string name="msg_save_success">Los datos se guardaron correctamente</string>
+    <string name="msg_delete_success">Los datos se eliminaron correctamente</string>
+    <string name="msg_duplicate_data">Error: ya existen datos duplicados</string>
+    <string name="msg_data_not_found">No se encontraron datos</string>
+    <string name="msg_error_save">Error al guardar los datos</string>
+    <string name="msg_error_delete">Error al eliminar los datos</string>
+    <string name="msg_task_completed_cannot_delete">La tarea no puede ser eliminada o anulada porque está completa</string>
+
+    <string name="dialog_question_continue">¿Desea continuar con la acción?</string>
+    <string name="dialog_yes">Sí</string>
+    <string name="dialog_no">No</string>
+
+</resources>
