@@ -10,4 +10,26 @@
     <string name="SnackbarSuccessAction">Executed action</string>
     <string name="btnTextTask_main">Task Management</string>
     <string name="btnTextTaskList_main">Task List</string>
+    <string name="btnSave_Task">Save Task</string>
+    <string name="btnDelete_Task">Delete Task</string>
+    <string name="btnCancel_Task">Cancel Task</string>
+    <string name="btnSearch_Task">Search Task</string>
+    <string name="txtId_Task">Id</string>
+    <string name="txtTitle_Task">Tittle Task</string>
+    <string name="txtDescription_Task">Description Task</string>
+    <string name="tvDueDate_Task">DueDate Task</string>
+    <string name="txtStatus_Task">Status Task</string>
+    <string name="txtPriority_Task">"Priority Task "</string>
+    <string name="txtAssignTo_Task">Assingn Task</string>
+    <string name="txtObservation_Task">Observation Task</string>
+    <string name="msg_save_success">Save Succesfull</string>
+    <string name="msg_delete_success">"Delete succesfull "</string>
+    <string name="msg_duplicate">Error data duplicate</string>
+    <string name="msg_not_found">No results of search</string>
+    <string name="msg_save_error">Error to Save</string>
+    <string name="msg_delete_error">Error Delete Mesagge</string>
+    <string name="msg_task_completed">Task Completed</string>
+    <string name="dialog_confirm">" Do you wish to proceed with the action"</string>
+    <string name="dialog_yes">yes</string>
+    <string name="dialog_no">no</string>
 </resources>
