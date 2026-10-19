@@ -20,20 +20,20 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/TextId" />
+                android:text="id" />
 
             <EditText
                 android:id="@+id/txtId_Task"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"
-                android:text="" />
+                android:inputType="text" />
 
             <ImageButton
                 android:id="@+id/btnSearch_Task"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/btnSearch"
                 app:srcCompat="@android:drawable/ic_menu_search" />
 
         </TableRow>
@@ -46,15 +46,15 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/TextTitle" />
+                android:text="Titulo" />
 
             <EditText
                 android:id="@+id/txtTitle_Task"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"
-                android:text="" />
+                android:inputType="text" />
+
         </TableRow>
 
         <TableRow
@@ -65,15 +65,14 @@
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/TextDescription" />
+                android:text="Descripcion" />
 
             <EditText
                 android:id="@+id/txtDescription_Task"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"
-                android:text="" />
+                android:inputType="text" />
         </TableRow>
 
         <TableRow
@@ -84,17 +83,18 @@
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/TextDueDate" />
+                android:text="Calendario" />
 
             <TextView
                 android:id="@+id/tvDueDate_Task"
-                android:layout_width="257dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <ImageButton
                 android:id="@+id/btnDueDate_Task"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/btnDueDate"
                 app:srcCompat="@android:drawable/ic_menu_my_calendar" />
         </TableRow>
 
@@ -106,16 +106,14 @@
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/TextStatus" />
+                android:text="Estado" />
 
             <EditText
                 android:id="@+id/txtStatus_Task"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"
-                android:text="" />
-
+                android:inputType="text" />
         </TableRow>
 
         <TableRow
@@ -126,15 +124,14 @@
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/TextPriority" />
+                android:text="Prioridad" />
 
             <EditText
                 android:id="@+id/txtPriority_Task"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"
-                android:text="" />
+                android:inputType="text" />
         </TableRow>
 
         <TableRow
@@ -145,15 +142,14 @@
                 android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/TextAssignTo" />
+                android:text="Asignacion" />
 
             <EditText
                 android:id="@+id/txtAssignTo_Task"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"
-                android:text="" />
+                android:inputType="text" />
         </TableRow>
 
         <TableRow
@@ -164,16 +160,15 @@
                 android:id="@+id/textView10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/TextObservation" />
+                android:text="Observacion" />
 
             <EditText
                 android:id="@+id/txtObservation_Task"
                 android:layout_width="154dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="" />
+                android:inputType="text" />
+
         </TableRow>
 
     </TableLayout>
@@ -182,8 +177,8 @@
         android:id="@+id/btnSave_Task"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:text="@string/TextSave"
+        android:layout_marginTop="24dp"
+        android:text="@string/btnCancel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
@@ -193,8 +188,8 @@
         android:id="@+id/btnRemove_Task"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/TextDelete"
+        android:layout_marginTop="36dp"
+        android:text="@string/btnSave"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
@@ -205,9 +200,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="@string/TextCancel"
+        android:text="@string/btnRemove"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnRemove_Task" />
 </androidx.constraintlayout.widget.ConstraintLayout>

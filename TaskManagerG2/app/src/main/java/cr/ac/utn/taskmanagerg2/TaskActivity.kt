@@ -25,6 +25,8 @@ class TaskActivity : AppCompatActivity() {
     private var dueYear: Int = 0
 
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -39,35 +41,34 @@ class TaskActivity : AppCompatActivity() {
         txtTitle = findViewById<EditText>(R.id.txtTitle_Task)
         txtDescription = findViewById<EditText>(R.id.txtDescription_Task)
         txtStatus = findViewById<EditText>(R.id.txtStatus_Task)
-        txtPriority = findViewById<EditText>(R.id.txtPriority_Task)
+        txtPriority= findViewById<EditText>(R.id.txtPriority_Task)
         txtAssignTo = findViewById<EditText>(R.id.txtAssignTo_Task)
         txtObservation = findViewById<EditText>(R.id.txtObservation_Task)
         tvDueDate = findViewById<TextView>(R.id.tvDueDate_Task)
 
         val btnSave = findViewById<Button>(R.id.btnSave_Task)
-        val btnRemove = findViewById<Button>(R.id.btnRemove_Task)
+
+        btnSave.setOnClickListener {
+
+        }
+
+        val btnRemove = findViewById<Button>(R.id.btnDelete_Task)
+        btnRemove.setOnClickListener {
+
+        }
+
         val btnCancel = findViewById<Button>(R.id.btnCancel_Task)
+        btnCancel.setOnClickListener {
+
+        }
         val btnSearch = findViewById<ImageButton>(R.id.btnSearch_Task)
+        btnSearch.setOnClickListener {
+
+        }
         val btnDueDate = findViewById<ImageButton>(R.id.btnDueDate_Task)
+        btnDueDate.setOnClickListener {
 
-        btnSearch.setOnClickListener(View.OnClickListener{ view ->
+        }
 
-        })
-
-        btnDueDate.setOnClickListener(View.OnClickListener{ view ->
-
-        })
-
-        btnSave.setOnClickListener(View.OnClickListener{ view ->
-
-        })
-
-        btnRemove.setOnClickListener(View.OnClickListener{ view ->
-
-        })
-
-        btnCancel.setOnClickListener(View.OnClickListener{ view ->
-
-        })
     }
 }
