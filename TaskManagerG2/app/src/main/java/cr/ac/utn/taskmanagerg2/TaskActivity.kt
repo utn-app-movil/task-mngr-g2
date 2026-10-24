@@ -1,11 +1,13 @@
 package cr.ac.utn.taskmanagerg2
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
+import android.widget.DatePicker
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
@@ -14,11 +16,19 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.isVisible
 import cr.ac.utn.taskmanagerg2.Util.util
+import cr.ac.utn.taskmanagerg2.data.memory.TaskMemoryManager
 import cr.ac.utn.taskmanagerg2.domain.model.Task
+import cr.ac.utn.taskmanagerg2.domain.model.TaskPriority
+import cr.ac.utn.taskmanagerg2.domain.model.TaskStatus
 import cr.ac.utn.taskmanagerg2.viewmodel.TaskViewModel
+import java.time.LocalDate
+import java.util.Calendar
 
-class TaskActivity : AppCompatActivity() {
+class TaskActivity : AppCompatActivity(),
+    DatePickerDialog.OnDateSetListener{
+
     private lateinit var txtId: EditText
     private lateinit var txtTitle: EditText
     private lateinit var txtDescription: EditText
@@ -32,6 +42,8 @@ class TaskActivity : AppCompatActivity() {
     private var dueYear: Int=0
     private var isEditMode: Boolean=false
     private lateinit var taskViewModel: TaskViewModel
+    private lateinit var btnRemove: Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +54,7 @@ class TaskActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        taskViewModel = TaskViewModel(TaskMemoryManager())
 
         txtId = findViewById<EditText>(R.id.txtId_Task)
         txtTitle = findViewById<EditText>(R.id.txtTitle_Task)
@@ -57,7 +70,7 @@ class TaskActivity : AppCompatActivity() {
         val btnSearch = findViewById<ImageButton>(R.id.btnSearch_Task)
         val btnDueDate = findViewById<ImageButton>(R.id.btnDueDate_Task)
         val btnSave= findViewById<Button>(R.id.btnSave_Task)
-        val btnRemove= findViewById<Button>(R.id.btnRemove_Task)
+        btnRemove= findViewById<Button>(R.id.btnRemove_Task)
         val btnCancel= findViewById<Button>(R.id.btnCancel_Task)
 
         btnSearch.setOnClickListener(View.OnClickListener{ view ->
@@ -81,6 +94,17 @@ class TaskActivity : AppCompatActivity() {
         })
     }
 
+    override fun onDateSet(view: DatePicker?, year: Int,
+                           month: Int, dayOfMonth: Int) {
+        dueDay=dayOfMonth
+        dueMonth=month
+        dueYear=year
+        tvDueDate.setText(
+                getDateFormatString(dueDay,
+            dueMonth, dueYear)
+        )
+    }
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
 
         return true
@@ -91,11 +115,16 @@ class TaskActivity : AppCompatActivity() {
     }
 
     private fun resetDate(){
-
+        val calendar = Calendar.getInstance()
+        dueDay = calendar.get(Calendar.DAY_OF_MONTH)
+        dueMonth = calendar.get(Calendar.MONTH)
+        dueYear = calendar.get(Calendar.YEAR)
     }
 
     private fun showDatePickerDialog(){
-
+        val datePickerDialog = DatePickerDialog(this,
+            this, dueYear, dueMonth, dueDay)
+        datePickerDialog.show()
     }
 
     private fun searchTask(id: String){
@@ -103,7 +132,20 @@ class TaskActivity : AppCompatActivity() {
             val task = taskViewModel.getTaskById(id)
             if (task != null){
                 isEditMode=true
-
+                btnRemove.isVisible=true
+                txtId.isEnabled = false
+                txtTitle.setText(task.title)
+                txtDescription.setText(task.description)
+                txtStatus.setText(task.status.name)
+                txtPriority.setText(task.priority.name)
+                txtObservation.setText(task.notes)
+                txtAssignTo.setText(task.assignedTo)
+                dueDay= task.dueDate.dayOfMonth
+                dueMonth= task.dueDate.monthValue
+                dueYear = task.dueDate.year
+                val dueDateStr = getDateFormatString(dueDay,
+                    dueMonth, dueYear)
+                tvDueDate.setText(dueDateStr)
             }else{
                 Toast.makeText(this, getString(R.string.TextDataNoFound),
                     Toast.LENGTH_LONG).show()
@@ -124,13 +166,27 @@ class TaskActivity : AppCompatActivity() {
         isEditMode=false
         txtId.isEnabled = true
         txtId.setText("")
+        txtTitle.setText("")
+        txtDescription.setText("")
+        txtStatus.setText("")
+        txtPriority.setText("")
+        txtObservation.setText("")
+        txtAssignTo.setText("")
+        tvDueDate.setText("")
+        btnRemove.isVisible=false
 
         invalidateOptionsMenu()
     }
 
     fun isValidationData(): Boolean{
-        val dateparse = util.parseStringToDateModern(tvDueDate.text.toString(), "dd/MM/yyyy")
-        return false
+        return txtId.text.toString().trim().isNotBlank()
+                && txtTitle.text.toString().trim().isNotBlank()
+                && txtDescription.text.toString().trim().isNotBlank()
+                &&  txtPriority.text.toString().trim().isNotBlank()
+                && txtStatus.text.toString().trim().isNotBlank()
+                && txtAssignTo.text.toString().trim().isNotBlank()
+                && tvDueDate.text.toString().trim().isNotBlank()
+                && txtObservation.text.toString().trim().isNotBlank()
     }
 
     fun saveTask(){
@@ -145,8 +201,17 @@ class TaskActivity : AppCompatActivity() {
                     val dueDate = util.parseStringToDateModern(tvDueDate.text.toString(),
                         "dd/MM/yyyy")
 
-
-                    val task = Task()
+                    val task = Task(
+                        txtId.text.toString().trim(),
+                        txtTitle.text.toString().trim(),
+                        txtDescription.text.toString().trim(),
+                        LocalDate.now(),
+                        dueDate!!,
+                        TaskStatus.valueOf(txtStatus.text.toString().uppercase()),
+                        txtAssignTo.text.toString().trim(),
+                        TaskPriority.valueOf(txtPriority.text.toString().uppercase()),
+                        txtObservation.text.toString().trim()
+                        )
 
                     if (!isEditMode)
                         taskViewModel.createTask(task)
