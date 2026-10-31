@@ -42,8 +42,6 @@ class TaskActivity : AppCompatActivity(),
     private var dueYear: Int=0
     private var isEditMode: Boolean=false
     private lateinit var taskViewModel: TaskViewModel
-    private lateinit var btnRemove: Button
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,7 +52,6 @@ class TaskActivity : AppCompatActivity(),
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        taskViewModel = TaskViewModel(TaskMemoryManager())
 
         txtId = findViewById<EditText>(R.id.txtId_Task)
         txtTitle = findViewById<EditText>(R.id.txtTitle_Task)
@@ -69,9 +66,6 @@ class TaskActivity : AppCompatActivity(),
 
         val btnSearch = findViewById<ImageButton>(R.id.btnSearch_Task)
         val btnDueDate = findViewById<ImageButton>(R.id.btnDueDate_Task)
-        val btnSave= findViewById<Button>(R.id.btnSave_Task)
-        btnRemove= findViewById<Button>(R.id.btnRemove_Task)
-        val btnCancel= findViewById<Button>(R.id.btnCancel_Task)
 
         btnSearch.setOnClickListener(View.OnClickListener{ view ->
             searchTask(txtId.text.trim().toString())
@@ -79,18 +73,6 @@ class TaskActivity : AppCompatActivity(),
 
         btnDueDate.setOnClickListener(View.OnClickListener{ view ->
             showDatePickerDialog()
-        })
-
-        btnSave.setOnClickListener(View.OnClickListener{ view ->
-            saveTask()
-        })
-
-        btnRemove.setOnClickListener(View.OnClickListener{ view ->
-            deleteTask()
-        })
-
-        btnCancel.setOnClickListener(View.OnClickListener{ view ->
-            cleanScreen()
         })
     }
 
@@ -106,12 +88,30 @@ class TaskActivity : AppCompatActivity(),
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.crud_actions, menu)
+        val menuDelete: MenuItem = menu!!.findItem(R.id.menuDelete)
+        menuDelete.isVisible = isEditMode
+        invalidateOptionsMenu()
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return super.onOptionsItemSelected(item)
+        when (item.itemId) {
+            R.id.menuSave -> {
+                saveTask()
+                return true
+            }
+            R.id.menuDelete -> {
+                deleteTask()
+                return true
+            }
+            R.id.menuCancel -> {
+                cleanScreen()
+                return true
+            }
+            else -> return super.onOptionsItemSelected(item)
+        }
     }
 
     private fun resetDate(){
@@ -129,10 +129,9 @@ class TaskActivity : AppCompatActivity(),
 
     private fun searchTask(id: String){
         try {
-            val task = taskViewModel.getTaskById(id)
+            val task = TaskViewModel.getTaskById(id)
             if (task != null){
                 isEditMode=true
-                btnRemove.isVisible=true
                 txtId.isEnabled = false
                 txtTitle.setText(task.title)
                 txtDescription.setText(task.description)
@@ -146,6 +145,7 @@ class TaskActivity : AppCompatActivity(),
                 val dueDateStr = getDateFormatString(dueDay,
                     dueMonth, dueYear)
                 tvDueDate.setText(dueDateStr)
+                invalidateOptionsMenu()
             }else{
                 Toast.makeText(this, getString(R.string.TextDataNoFound),
                     Toast.LENGTH_LONG).show()
@@ -173,8 +173,6 @@ class TaskActivity : AppCompatActivity(),
         txtObservation.setText("")
         txtAssignTo.setText("")
         tvDueDate.setText("")
-        btnRemove.isVisible=false
-
         invalidateOptionsMenu()
     }
 
@@ -192,7 +190,7 @@ class TaskActivity : AppCompatActivity(),
     fun saveTask(){
         try {
             if (isValidationData()){
-                val task = taskViewModel.getTaskById(txtId.text.toString().trim())
+                val task = TaskViewModel.getTaskById(txtId.text.toString().trim())
                 if (task != null
                     && !isEditMode){
                     Toast.makeText(this, getString(R.string.TextDuplicateData)
@@ -214,9 +212,9 @@ class TaskActivity : AppCompatActivity(),
                         )
 
                     if (!isEditMode)
-                        taskViewModel.createTask(task)
+                        TaskViewModel.createTask(task)
                     else
-                        taskViewModel.updateTask(task)
+                        TaskViewModel.updateTask(task)
 
                     cleanScreen()
 
@@ -235,7 +233,7 @@ class TaskActivity : AppCompatActivity(),
 
     fun deleteTask(): Unit{
         try {
-            taskViewModel.removeTask(txtId.text.toString())
+            TaskViewModel.removeTask(txtId.text.toString())
             cleanScreen()
             Toast.makeText(this, getString(R.string.TextDeleteSuccess)
                 , Toast.LENGTH_LONG).show()
