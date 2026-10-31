@@ -2,15 +2,20 @@ package cr.ac.utn.taskmanagerg2.Util
 
 import android.content.Context
 import android.content.Intent
+import cr.ac.utn.taskmanagerg2.data.memory.TaskMemoryManager
+import cr.ac.utn.taskmanagerg2.viewmodel.TaskViewModel
 import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.Locale
 
+const val EXTRA_MESSAGE_ID = "cr.ac.utn.task.Id"
 class util {
     companion object{
-        fun openActivity(context: Context, classScreen: Class<*>){
-            val intent= Intent(context, classScreen)
+        fun openActivity(context: Context
+                         , objClass: Class<*>, extraName: String="", value: String?=null){
+            val intent= Intent(context
+                , objClass).apply { putExtra(extraName, value)}
             context.startActivity(intent)
         }
 
