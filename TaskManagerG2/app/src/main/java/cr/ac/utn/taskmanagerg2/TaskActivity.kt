@@ -16,9 +16,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.isVisible
+import cr.ac.utn.taskmanagerg2.Util.EXTRA_MESSAGE_ID
 import cr.ac.utn.taskmanagerg2.Util.util
-import cr.ac.utn.taskmanagerg2.data.memory.TaskMemoryManager
 import cr.ac.utn.taskmanagerg2.domain.model.Task
 import cr.ac.utn.taskmanagerg2.domain.model.TaskPriority
 import cr.ac.utn.taskmanagerg2.domain.model.TaskStatus
@@ -63,6 +62,11 @@ class TaskActivity : AppCompatActivity(),
         tvDueDate = findViewById<TextView>(R.id.tvDueDate_Task)
 
         resetDate()
+        val taskId = intent.getStringExtra(EXTRA_MESSAGE_ID)
+        if (!taskId.isNullOrBlank()){
+            txtId.setText(taskId)
+            searchTask(taskId)
+        }
 
         val btnSearch = findViewById<ImageButton>(R.id.btnSearch_Task)
         val btnDueDate = findViewById<ImageButton>(R.id.btnDueDate_Task)
@@ -81,10 +85,8 @@ class TaskActivity : AppCompatActivity(),
         dueDay=dayOfMonth
         dueMonth=month
         dueYear=year
-        tvDueDate.setText(
-                getDateFormatString(dueDay,
+        tvDueDate.text = getDateFormatString(dueDay,
             dueMonth, dueYear)
-        )
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -144,7 +146,7 @@ class TaskActivity : AppCompatActivity(),
                 dueYear = task.dueDate.year
                 val dueDateStr = getDateFormatString(dueDay,
                     dueMonth, dueYear)
-                tvDueDate.setText(dueDateStr)
+                tvDueDate.text=dueDateStr
                 invalidateOptionsMenu()
             }else{
                 Toast.makeText(this, getString(R.string.TextDataNoFound),
@@ -172,7 +174,7 @@ class TaskActivity : AppCompatActivity(),
         txtPriority.setText("")
         txtObservation.setText("")
         txtAssignTo.setText("")
-        tvDueDate.setText("")
+        tvDueDate.text=""
         invalidateOptionsMenu()
     }
 
